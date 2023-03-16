@@ -1,0 +1,59 @@
+
+<div class="container-div">
+  <h2 style="color:#3568A6;text-align: center;" >Unassign Complaints</h2>
+    <!-- <button routerLink="" class="btn2">Logout</button> <br> -->
+    <div class="row no-gutters">
+      <div class="col-10 text-end mb-2">
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          [(ngModel)]="name"
+          (ngModelChange)="search()"
+          placeholder="Enter Something"
+        />
+      </div>
+      
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Sr. no</th>
+          <th scope="col">Customer Name</th>
+          <th scope="col">Assign Engineer</th>
+          <th scope="col">View details</th>
+         
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of items  |paginate:{itemsPerPage:5, currentPage:p};index as i">
+          <td>{{i+1}}</td>
+          <td>{{data.firstName}} {{ data.lastName}}</td>
+         
+          <td><button class="btnView" mat-raised-button color="accent" 
+             (click)="openDialog1(data.pinCode,data._id,data.firstName)">Assign</button></td>
+             <td> <button class="btnView" mat-raised-button color="primary" 
+              mat-button (click)="openDialog(data._id)">View Details</button></td>
+          <!-- <td>{{data.assignedEngineer}}</td>
+          <td>{{data.status}}</td> -->
+        </tr>
+        
+        
+        
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="col-6 w-50">
+        <pagination-controls (pageChange)="p=$event" class="float=rigth"></pagination-controls>
+      </div>
+      <div class="col-6 w-50 text-end">
+        <!-- <button class="edit p-2" routerLink="">
+          Back
+        </button> -->
+        <button class="btn btn-primary"  routerLink="/dashboard/allcomplains">Back</button>
+      </div>
+    </div>
+    
+  </div>
+  

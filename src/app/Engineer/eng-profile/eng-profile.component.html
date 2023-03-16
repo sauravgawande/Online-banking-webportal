@@ -1,0 +1,149 @@
+<section>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-6 mb-4 mb-lg-0">
+        <div class="card mb-3" style="border-radius: 0.5rem">
+          <div
+            class="row g-0"
+            style="
+              box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+              height: 380px;
+            "
+          >
+            <div
+              class="col-md-4 text-center"
+              style="
+                border-top-left-radius: 0.5rem;
+                border-bottom-left-radius: 0.5rem;
+                background: rgb(6, 170, 203);
+                background: linear-gradient(
+                  180deg,
+                  rgba(6, 170, 203, 1) 0%,
+                  rgba(53, 104, 166, 1) 66%,
+                  rgba(47, 92, 145, 1) 100%
+                );
+              "
+            >
+              <img
+                src="../../../../assets/person.png"
+                alt="Avatar"
+                class="img-fluid my-3"
+                style="width: 80px"
+              />
+              <h4>{{ userData?.firstName }}&nbsp;{{ userData?.lastName }}</h4>
+              <p>{{ userData?.userType }}</p>
+              <!-- <i class="far fa-edit mb-5"></i> -->
+              <button class="edit p-2" (click)="changePassword()">
+                Change Password</button
+              ><br />
+              <button class="edit p-2" routerLink="/engineer/allcomplaints">
+                Back
+              </button>
+            </div>
+            <!-- user info -->
+            <div class="col-md-8" *ngIf="!changepasswordForm">
+              <div class="card-body p-4" style="border: 0">
+                <h6>Information</h6>
+                <hr class="mt-0 mb-4" />
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Email</h6>
+                    <p class="text-muted">{{ userData?.email }}</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Phone</h6>
+                    <p class="text-muted">{{ userData?.phone }}</p>
+                  </div>
+                </div>
+
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Address</h6>
+                    <p class="text-muted">{{ userData?.address1 }}</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Pincode</h6>
+                    <p class="text-muted">{{ userData?.pinCode }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Change password -->
+            <div class="col-md-8" *ngIf="changepasswordForm">
+              <div class="card-body p-4" style="border: 0">
+                <h6>Change Password</h6>
+                <hr class="mt-0 mb-4" />
+                <form
+                  [formGroup]="passwordData"
+                  (ngSubmit)="changePasswordOfUser()"
+                >
+                  <div class="row">
+                    <div class="col-12 py-1">
+                      <input
+                        type="password"
+                        placeholder="Enter Old Password"
+                        formControlName="oldPassword"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12 py-1">
+                      <input
+                        type="password"
+                        placeholder="Enter New Password"
+                        formControlName="newPassword"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12 py-1">
+                      <input
+                        type="password"
+                        placeholder="Re-enter New Password"
+                        formControlName="reNewPassword"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-3  py-1">
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-block"
+                        style="margin-bottom: 2%"
+                        
+                        
+                      >
+                        <!-- [disabled]="userData.invalid" -->
+                        Submit
+                      </button></div>
+                      <div class="col-6  py-1">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-block"
+                        style="margin-bottom: 2%"
+                        
+                        (click)="changePassword()"
+                      >
+                        Back
+                      </button>
+                      <!-- <button (click)="changePassword()">Back</button> -->
+                    </div>
+                  </div>
+                  <p *ngIf="msg"  style="color:red">{{msg}}</p>
+                </form>
+              </div>
+            </div>
+            <!--change password end-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

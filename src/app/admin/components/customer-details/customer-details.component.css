@@ -1,0 +1,29 @@
+
+@import url('../../../../assets/bootstrap/bootstrap.min.css');
+
+ul{
+    list-style: none;
+    text-align: center;
+}
+li
+{
+    margin-top: 2%;
+}
+.btn{
+    position: absolute;
+    right: 0;
+    top: 3%;
+    font-size: 50px;
+    color: #053d83;
+    border: 0;
+}
+.btn:hover{
+    border: 0;
+    color: #053d83;
+}
+h6{
+    color: #053d83;
+}
+h4{
+    color: #053d83;
+}

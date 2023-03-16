@@ -1,0 +1,33 @@
+/* @import url('E:\Online_complaint_redressal_syaytem\frontend\src\assets\bootstrap\bootstrap.min.css'); */
+/* @import url('../node_modules/font-awesome/css/font-awesome.css'); */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+
+.footer{
+    /* position: relative; */
+   position: fixed;
+    /* left: 0; */
+    bottom: 0;
+    width: 100%;
+    
+    text-align: center;
+
+
+
+
+   
+}
+.mat-icon{
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important; */
+}
+
+/* .row[_ngcontent-ajr-c75] > *[_ngcontent-ajr-c75] {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+    font-size: 10px;
+} */

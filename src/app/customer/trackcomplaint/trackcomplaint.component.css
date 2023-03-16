@@ -1,0 +1,68 @@
+@import url('../../../assets/bootstrap/bootstrap.min.css');
+
+.main-div{
+    width: 60%;
+    height: auto;
+    /* box-shadow: 2px 2px 2px 2px rgb(199, 196, 196);    */
+    margin: 20px auto;
+    /* margin-top: 5%; */
+    padding: 10px auto;
+    
+ 
+}
+.desc{
+    width: 55%;
+    padding: 30px 20px;
+    margin: 15px 0;
+    box-shadow: 2px 2px 2px 2px rgb(199, 196, 196);
+}
+.head{
+    color: #3568A6;
+    font-weight: 900;
+    
+}
+.form{
+    margin: 0px auto;
+    padding: 20px;
+    text-align: center;
+    
+}
+.input-div{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.input{
+    
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn{
+    padding: 5px 20px;
+        border-radius: 5px;
+        background-color: #3568A6;
+        color: #fff;
+        border: 0;
+        cursor: pointer;
+        width: 15%;
+        margin-right: 5%;
+}
+.img{
+    height: 600px;
+    width: 100%;
+    
+} 
+h3{
+  color: #3568A6;
+  text-align: center;
+  margin-top: 1%;
+}
+
+
+
+

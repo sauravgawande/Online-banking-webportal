@@ -1,0 +1,252 @@
+<div
+  class="container text-center my-5"
+  style="
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+  "
+>
+  <h2 style="color: #3568a6; padding-top: 2%" class="my-5">Register User</h2>
+
+  <div class="container">
+    <form [formGroup]="userData" (ngSubmit)="createUser()">
+      <div class="form-outline mb-4">
+        <select
+          class="dropDown"
+          formControlName="userType"
+          (change)="onChange()"
+        >
+          <option [ngValue]="null" disabled>Choose Role</option>
+          <option *ngFor="let item of userTypes" [ngValue]="item.id">
+            {{ item.name }}
+          </option>
+        </select>
+        
+        <div *ngIf="userType && userType.invalid && userType.touched">
+          <p *ngIf="userType.hasError('required')">You must have to select Role of user</p>
+        </div>
+      </div>
+
+      <!-- 2 column grid layout for inline styling -->
+      <div class="row mb-4">
+        <div class="col-6 w-50 d-flex justify-content-center">
+          <input
+            type="text"
+            formControlName="firstName"
+            class="form-control w-100"
+            placeholder="Enter First Name"
+          />
+        </div>
+        <div class="col-6 w-50 d-flex justify-content-center">
+          <input
+            type="text"
+            formControlName="lastName"
+            class="form-control"
+            placeholder="Enter Last Name"
+          />
+        </div>
+      </div>
+
+      <!-- error message -->
+      <div class="row no-gutters m-0 p-0">
+        <div class="col-6 w-50 d-flex justify-content-start">
+          <div *ngIf="firstName && firstName.invalid && firstName.touched">
+            <p *ngIf="firstName.hasError('required')">First name is required</p>
+            <p *ngIf="firstName.hasError('minlength')">
+              Minimum length must be 6 letter long
+            </p>
+          </div>
+        </div>
+        <div class="col-6 w-50 d-flex justify-content-start">
+          <div *ngIf="lastName && lastName.invalid && lastName.touched">
+            <p *ngIf="lastName.hasError('required')">Last name is required</p>
+            <p *ngIf="lastName.hasError('minlength')">
+              Minimum length must be 6 letter long
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-6 w-50 d-flex justify-content-center">
+          <input
+            type="text"
+            formControlName="phone"
+            class="form-control"
+            placeholder="Enter Contact No."
+            (keypress)="numberOnly($event)"
+            [maxlength]="10"
+            [minlength]="10"
+          />
+        </div>
+        <div class="col-6 w-50 d-flex justify-content-center">
+          <input
+            type="email"
+            formControlName="email"
+            class="form-control"
+            placeholder="Enter Email"
+          />
+        </div>
+      </div>
+
+      <!-- error message -->
+      <div class="row no-gutters m-0 p-0">
+        <div class="col-6 w-50 d-flex justify-content-start">
+          <div *ngIf="phone && phone.invalid && phone.touched">
+            <p *ngIf="phone.hasError('required')">Contact is required</p>
+            <p *ngIf="phone.hasError('minlength')">
+              Minimum digits in contact is 10
+            </p>
+            <p *ngIf="phone.hasError('maxlength')">
+              Minimum digits in contact is 10
+            </p>
+            <p *ngIf="phone.hasError('pattern')">
+              Contact must contain numbers
+            </p>
+          </div>
+        </div>
+        <div class="col-6 w-50 d-flex justify-content-start">
+          <div *ngIf="email && email.invalid && email.touched">
+            <p *ngIf="email.hasError('required')">Email is required</p>
+            <p *ngIf="email.hasError('email')">Please enter valid email</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-6 w-50 d-flex justify-content-center">
+          <input
+            type="text"
+            formControlName="address"
+            class="form-control"
+            placeholder="Enter Address"
+          />
+        </div>
+        <div class="col-6 w-50 d-flex justify-content-center">
+          
+          <select class="dropDown" formControlName="pinCode">
+            <option [ngValue]="null" disabled>Choose Area</option>
+            <option *ngFor="let item of pincodeList1" [ngValue]="item.pinCode">
+              {{ item.area }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+       <!-- error message -->
+       <div class="row no-gutters m-0 p-0">
+        <div class="col-6 w-50 d-flex justify-content-start">
+          <div *ngIf="address && address.invalid && address.touched">
+            <p *ngIf="address.hasError('required')">Address is required</p>
+            
+          </div>
+        </div>
+        <div class="col-6 w-50 d-flex justify-content-start">
+          <div *ngIf="pinCode && pinCode.invalid && pinCode.touched">
+            <p *ngIf="pinCode.hasError('required')">Pincode is required</p>
+            <!-- <p *ngIf="pinCode.hasError('pattern')">Pincode must enter in number</p> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-6 w-50 d-flex justify-content-center">
+          <input
+            type="text"
+            formControlName="username"
+            class="form-control"
+            placeholder="Enter Username"
+          />
+        </div>
+        <div class="col-6 w-50 d-flex justify-content-center">
+          <input
+            type="password"
+            formControlName="password"
+            class="form-control"
+            placeholder="Enter Password"
+          />
+        </div>
+      </div>
+
+       <!-- error message -->
+       <div class="row no-gutters m-0 p-0">
+        <div class="col-6 w-50 d-flex justify-content-start">
+          <div *ngIf="username && username.invalid && username.touched">
+            <p *ngIf="username.hasError('required')">Username is required</p>
+            
+          </div>
+        </div>
+        <div class="col-6 w-50 d-flex justify-content-start">
+          <div *ngIf="password && password.invalid && password.touched">
+            <p *ngIf="password.hasError('required')">Password is required</p>
+            <p *ngIf="password.hasError('minlength')">Password must enter greater than 6 character </p>
+          </div>
+        </div>
+      </div>
+      <!-- if user type is manager -->
+
+      <div class="form-outline mb-4" *ngIf="isManagerRoleSelected">
+        <h6>Assign Engineer under Manager</h6>
+        <div
+          class="form-check form-check-inline"
+          *ngFor="let item of pincodeList"
+        >
+          <input
+            class="form-check-input"
+            type="checkbox"
+            ng-checked="isCheck"
+            formControlName="assignedEngineerToManager"
+            value="{{ item._id }}"
+            (change)="onChangeCheckbox(item.pinCode)"
+          />
+          <label class="form-check-label" for="inlineCheckbox1">{{
+            item.area
+          }}</label>
+        </div>
+      </div>
+
+      <!-- if user is customer -->
+      <div class="form-outline mb-4" *ngIf="isCustomerRoleSelected">
+        <h6>Assign Service to Customer</h6>
+        <select class="dropDown" formControlName="serviceType">
+          <option [ngValue]="null" disabled>Choose Service</option>
+          <option *ngFor="let item of serviceList" [ngValue]="item._id">
+            {{ item.name }}
+          </option>
+        </select>
+        <!-- </div> -->
+      </div>
+      
+      <!-- error msg -->
+      <!-- <div class="row">
+        <div class="col-12 w-100 d-flex justify-content-center">
+          <div *ngIf="service && service.invalid && service.touched">
+            <p *ngIf="service.hasError('required')">Please select service type</p>
+           
+          </div>
+        </div>
+      </div> -->
+
+
+      <!-- Submit button -->
+      <button
+        type="submit"
+        class="btn btn-primary btn-block"
+        style="margin-bottom: 2%"
+        
+        [disabled]="userData.invalid"
+        
+      >
+        <!-- [disabled]="userData.invalid" -->
+        Submit
+      </button>
+      <button
+        type="submit"
+        class="btn btn-primary btn-block"
+        style="margin-bottom: 2%; margin-left: 1%"
+        routerLink="/admin/Registartion"
+      >
+        Back
+      </button>
+    </form>
+  </div>
+</div>

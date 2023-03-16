@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Montserrat', sans-serif; }
+
+
+@import '../node_modules/font-awesome/css/font-awesome.css';
+
+/* @import url('E:\Backup_Kirtee_R\Project-online-complaint-redressal\frontend1\src\assets\bootstrap\bootstrap.min.css'); */
+@import url('./assets/bootstrap/bootstrap.min.css');
+
+.btn-back{
+    position: absolute;
+    right: 12%;
+    margin-top: 1%;
+  }
+
+  .table
+  {
+    /* border: 1px solid #3568A6; */
+    text-align: center;
+    margin-top: 2%;
+    width:100%;
+   /* margin: 7% auto; */
+  }
+  th
+  {
+    height:50px;
+    /* border-bottom: 1px solid #3568A6; */
+    background-color: #3568A6;
+    color: white;
+    font-weight: normal;
+    /* align-items: center; */
+    margin-bottom: 2%;
+  }
+ 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

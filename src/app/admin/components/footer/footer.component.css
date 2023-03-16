@@ -1,0 +1,31 @@
+.foot-img{
+    height: 30px;
+    margin: 10px 10px 10px 10px ;
+    position: relative;
+    left: 47%;
+}
+.foot-img2{
+    height: 30px;
+    position: relative;
+    left: 42%;
+}
+
+/* @import url('D:\Complaint Redressel Project\work\sidenav\src\assets\bootstrap\bootstrap.min.css');
+
+.footer{
+    position: absolute;
+    bottom: 0;
+}
+.mat-icon{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+} */
+
+/* .row[_ngcontent-ajr-c75] > *[_ngcontent-ajr-c75] {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+    font-size: 10px;
+} */

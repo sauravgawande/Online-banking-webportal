@@ -1,0 +1,79 @@
+<div class="cards">
+
+    <!-- starting of open Card -->
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>play_for_work</mat-icon>
+          Open Tickets</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h3>{{totalOpen}}</h3>
+      <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="btn" routerLink="../open">View List</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- End of open Card -->
+    
+      <!-- Card Number 1 -->
+    
+     <mat-card class="example-card">
+      <mat-card-header>
+        
+        <mat-card-title>
+          <mat-icon> transfer_within_a_station</mat-icon>
+         WIP Tickets</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h3>{{totalWip}} </h3>
+      <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="btn" routerLink="../wip">View List</button>
+      </mat-card-actions>
+    </mat-card>
+    </div>
+    
+    <div class="cards1">
+    
+     <!-- Card Number 2 -->
+    
+     <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>flag</mat-icon>
+          Esclated Tickets</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h3>{{totalEscalated}} </h3>
+      <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="btn" routerLink="../esclated">View List</button>
+      </mat-card-actions>
+    </mat-card>
+    
+     
+    
+     <!-- Card Number 3 -->
+    
+     <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>check_circle</mat-icon>
+          Resolved Tickets</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h3>{{totalResolved}}</h3>
+      <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="btn" routerLink="../resolved">View List</button>
+      </mat-card-actions>
+    </mat-card>
+    
+    </div>
+    
+    

@@ -1,0 +1,60 @@
+/* @import url('../../../../assets/bootstrap/bootstrap.min.css'); */
+
+.form{
+    padding: 10px;
+    text-align: center;
+  
+}
+
+.left-div{
+    text-align: center;
+    display: grid;
+    justify-content:center;
+}
+.select-div{
+    width: 100%;
+    margin-left: 10px;
+}
+.input{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn{
+    
+     width: 10%;
+    padding: 10px;
+   margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: #3568A6;
+}
+h6{
+  color: #3568A6;
+}
+.example-section {
+    display: grid;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+    margin-top: 40px;
+  }
+
+  p{
+    color: red;
+    font-size: 14px;
+  }
+  .dropDown{
+    width: 100%;
+    height: 4vh;
+    border: 1px solid #ced4da;
+    border-radius: 5px 5px;
+  }
+  .dropDown:focus{
+    border: 1px solid #3568A6;
+  }

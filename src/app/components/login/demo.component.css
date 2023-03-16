@@ -1,0 +1,180 @@
+@import url('../../../assets/bootstrap/bootstrap.min.css');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+h2{
+    color: #3568A6;
+}
+p{
+    color: #3568A6;
+    font-size: clamp(10px, 1vw, 20px);
+    text-align: justify;
+}
+.card{
+    border: 0;
+   
+}
+.service-card{
+
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.card-header
+{
+    background-color: #3568A6;
+    color: white;
+}
+
+
+
+/* .container{
+    margin: 0px auto;
+}
+.info-log{
+    display: flex;
+     width: 97%;
+     height: 350px;
+}
+.form-div {
+    width: 300px;
+    height: 320px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 2px 2px 0px 2px rgb(218, 216, 216);
+    border-radius: 5px;
+    text-align: center;
+}
+.login-div{
+    display: flex;
+     width: 30%;
+}
+.info-card {
+    color: #3568A6;
+    padding: 70px;
+}
+.info-mat-card{
+    height: 320px;
+}
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.input2{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn {
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: #3568A6;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.fgt-pass {
+    cursor: pointer;
+}
+
+.img {
+    margin-top: 30px;
+    height: 290px;
+    box-shadow: 0px 2px 2px rgb(225, 220, 220);
+}
+
+.service {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.service h1 {
+    color: #3568A6;
+    font-weight: 1000;
+}
+
+.main-card {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    width: 80%;
+    height: 300px;
+
+    margin: 0px auto;
+    justify-content: center;
+}
+
+.card-div {
+    width: 90%;
+    height: 200px;
+
+}
+
+.card-div h2 {
+    color: #3568A6;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.info {
+    width: 80%;
+    height: 300px;
+    border: 0 !important;
+}
+
+.info h2 {
+    text-align: center;
+    color: #3568A6;
+
+}
+
+.mat-card {
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px #c8c4c4;
+}
+
+mat-card-content {
+    color: #3568A6;
+}
+
+@media screen and (max-width:600px) {
+    .info-card {
+        color: #3568A6;
+        padding: 50px;
+        font-size: 6px
+    }
+
+    .service h1 {
+        color: #3568A6;
+        font-weight: 1000;
+        font-size: 10px;
+    }
+
+    .card-div h2 {
+        color: #3568A6;
+        text-align: center;
+        margin: 10px auto;
+        font-size: 7px;
+    }
+
+    mat-card-content {
+        color: #3568A6;
+        font-size: 4px;
+    }
+    .info-mat-card{
+        height: 320px;
+        width: 100%;
+    }
+    .info-log{
+        display: flex;
+         width: 97%;
+         height: 350px;
+    }
+
+} */

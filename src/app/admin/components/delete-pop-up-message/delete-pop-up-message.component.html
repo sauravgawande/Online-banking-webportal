@@ -1,0 +1,9 @@
+<div class="custom-snackbar">
+    <mat-icon>done</mat-icon>
+    &nbsp;
+    <span>{{data?.message}}</span>
+    <!-- <p>{{data?.id}}</p> -->
+    <div class="spacer"></div>
+    <button style="color:white;font-size: 20px;" class="btn" (click)="deleteUser(data?.id)">Yes</button>
+    <button style="color:white;font-size: 20px;" class="btn" (click)="closeSnackbar()">No</button>
+</div>

@@ -1,0 +1,60 @@
+<div class="container text-center">
+  <h2 style="margin-top: 1%; color: #3568a6">Assigned Complaint List</h2>
+  <input
+    style="margin-top: 1em"
+    type="text"
+    class="form-control"
+    name="name"
+    [(ngModel)]="name"
+    (ngModelChange)="search()"
+    placeholder="Enter Something"
+  />
+  <table class="table border" style="margin-top: 1%; margin-bottom: 0">
+    <thead class="text-center">
+      <th class="headPad">Sr.No.</th>
+
+      <th class="headPad">Customer Name</th>
+
+      <th class="headPad">Status</th>
+      <th class="headPad">View Details</th>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let items of getDataFromComplaint
+            | paginate : { itemsPerPage: 5, currentPage: p };
+          index as i
+        "
+      >
+        <td style="width: 1%">{{ i + 1 }}</td>
+
+        <td>{{ items.firstName }}&nbsp;{{ items.lastName }}</td>
+        <td class="capitalize">{{ items.status }}</td>
+        <td>
+          <button class="btn1" (click)="openDialog(items._id)">
+            View Detail
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <!-- <pagination-controls ng-model="pagination.currentPage" (pageChange)= "p = $event"></pagination-controls> -->
+    </tfoot>
+  </table>
+
+  <div class="row no-gutters" style="margin-top: 1%">
+    <div class="col-10 w-50 text-start">
+      <pagination-controls
+        (pageChange)="p = $event"
+        class="float=rigth"
+      ></pagination-controls>
+    </div>
+    <div class="col-2 w-50 text-end">
+      <!-- <button class="btn btn-primary" routerLink="/engineer/allcomplaints">
+        Back
+      </button> -->
+    </div>
+  </div>
+
+  
+</div>

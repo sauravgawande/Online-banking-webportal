@@ -1,0 +1,43 @@
+<mat-sidenav-container >
+  <mat-sidenav mode="side" opened>
+    
+    <button mat-button routerLink="allcomplaints" class="menu-button">
+      <mat-icon> bar_chart</mat-icon>
+      <span>All Complaints</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button routerLink="openComplaint" class="menu-button">
+      <mat-icon>account_box</mat-icon>
+      <span>Assigned Complaints</span>
+    </button>
+    <mat-divider></mat-divider>
+   
+    <button  mat-button routerLink="resolveComplaint" class="menu-button">
+      <mat-icon #ResolvedComplaints>account_box</mat-icon>
+      <span>Resolved Complaints</span>
+    </button>
+
+    <mat-divider></mat-divider>
+    <button mat-button routerLink="escalatedComplaint" class="menu-button">
+      <mat-icon>track_changes</mat-icon>
+      <span>Escalated Complaints</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="profile">
+      <mat-icon>person</mat-icon>
+      <span>My Profile</span>
+  </button>
+  <mat-divider></mat-divider>
+    <button mat-button class="menu-button" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+    </button>
+    <mat-divider></mat-divider>
+    
+  </mat-sidenav>
+  <div class="content mat-elevation-z4 " style="height: 30em; ">
+    <router-outlet></router-outlet>
+</div>
+</mat-sidenav-container>
+
+<!-- <app-footer1></app-footer1> -->

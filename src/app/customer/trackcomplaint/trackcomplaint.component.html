@@ -1,0 +1,41 @@
+
+<div class="container">
+  <form class="tickets" (ngsubmit)="submit()" [formGroup]="form" >
+    <h3 class="label">Enter Ticket Number</h3><br>
+    <div class="row">
+      <div class="col-6 w-50 ">
+        <input class="form-control" type="text" name="Ticket Num" placeholder="Enter Ticket Number"  formControlName="ticketNumber" ><br>
+      </div>
+      <div class="col-6 w-50">
+        <button class="btn btn-block" type="submit" (click)="submit()" >Search</button><br>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- table -->
+<div class="container">
+    <table class="table">
+      <thead style="background-color: #3568A6;">
+        <tr > 
+          <th scope="col">Description</th>
+          <th scope="col">Date</th>
+          <th scope="col">Assigned Engineer</th>
+          <th scope="col">Status </th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr   *ngFor="let data of users"> 
+          <td>{{data.description}}</td>
+          <td>{{data.dateCreated.slice(0,15)}}</td>
+          <td>{{data.assignUserId}}</td>
+          <td>{{data.status}}</td>
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+ 

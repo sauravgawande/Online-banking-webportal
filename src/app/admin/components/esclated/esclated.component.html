@@ -1,0 +1,48 @@
+<div class="container text-center">
+    <h1 style="margin-top: 1%;color: #3568A6;">Escalated Status Customer List</h1>
+    <div class="row no-gutters">
+        <div class="col-10 text-end">
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            [(ngModel)]="name"
+            (ngModelChange)="search()"
+            placeholder="Enter Something"
+          />
+        </div>
+        
+      </div>
+        <table class="table border">
+            <thead class="text-center">
+                <th>Sr.No.</th>
+                <th>Ticket no.</th>
+                <th>Customer Name</th>
+                <th>Date Created</th>
+                <th>View Details</th>
+                <th>Assigned Engineer</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let items of complaintList| paginate:{itemsPerPage:4, currentPage:p} ;index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{items.ticketNumber}}</td>
+                    <td>{{items.firstName}}&nbsp;{{items.lastName}}</td>
+                    <td>{{items.dateCreated.slice(0,15)}}</td>
+                    <td><button mat-raised-button class="btn" (click)="openDialog(items._id)">View
+                            Detail</button></td>
+                    <td>{{items.assignUserId}}</td>
+                </tr>
+            </tbody>
+            <tfoot ></tfoot>
+        </table>
+        <div class="row no-gutters" style="">
+          <div class="col-10 w-50 text-start">
+            <pagination-controls (pageChange)="p=$event" class="float=rigth"></pagination-controls>
+          </div>
+          <div class="col-2 w-50 text-end">
+            <button class="btn btn-primary"  routerLink="/admin/Dashboard">Back</button>
+          </div>
+        </div>
+    
+        
+    </div>

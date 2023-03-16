@@ -1,0 +1,63 @@
+<!-- <app-landing></app-landing> -->
+
+
+<mat-sidenav-container >
+
+    <mat-sidenav mode="side" opened>
+
+        <button mat-button class="menu-button" routerLink="./Dashboard">
+            <mat-icon>home</mat-icon>
+            <span>Dashboard</span>
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button" routerLink="./Registration">
+            <mat-icon>supervisor_account</mat-icon>
+            <span>Registration</span>
+        </button>
+               <mat-divider></mat-divider>
+        <button mat-button class="menu-button" routerLink="./myProfile">
+            <mat-icon>person</mat-icon>
+            <span>My Profile</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" routerLink="./location">
+            <mat-icon>explore</mat-icon>
+            <span>Locations</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" routerLink="./serviceType">
+            <mat-icon>touch_app</mat-icon>
+            <span>Services</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" routerLink="./problemType">
+            <mat-icon>report_problem</mat-icon>
+            <span>Problems</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button"(click)="logout()">
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+
+    </mat-sidenav>
+    <mat-sidenav-content >
+        <div class="content mat-elevation-z4 ">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- <app-footer1></app-footer1> -->

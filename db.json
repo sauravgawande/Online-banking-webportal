@@ -1,0 +1,43 @@
+{
+  "tickets": [
+    {
+      
+      "customerName": "abc",
+      "assignedEng": "pqr",
+      "status": "Open"
+    },
+    {
+      "customerName": "xyz",
+      "assignedEng": "pqr",
+      "status": "work in progress"
+    },
+    {
+      "customerName": "mno",
+      "assignedEng": "pqr",
+      "status": "Escalated"
+    }
+  ],
+  "customerDetails": [
+    {
+      "CustomerName": "abc",
+      "address": "ABC,p-20",
+      "contact": "0897889780",
+      "service": "mobile",
+      "pincode": "243546",
+      "typeOfProblem":"pick a call but voce not appear",
+      "description":"Nisi nulla pariatur elit ex aliquip aute irure et ea anim sint.Deserunt Lorem eiusmod eu esse ut cillum ex nisi aute. Minim nostrud nostrud laborum pariatur nostrud. Non consequat reprehenderit tempor consectetur. Sint labore amet cillum commodo ullamco velit anim ad duis do. Est et esse do eu exercitation. Laborum nisi ex Lorem esse cillum."
+    }
+  ],
+  "engineers": [
+    {
+      "engName": "pqr"
+    },
+    {
+      "engName": "XYZ"
+    },
+    {
+      "engName": "ABC"
+    }
+  ]
+  
+}

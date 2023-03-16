@@ -1,0 +1,27 @@
+@import url('../../../assets/bootstrap/bootstrap.min.css');
+
+h5{
+    color: #053d83;
+}
+.form-check-label{
+    color: #053d83;
+}
+.btn{
+    background-color: #3568A6;
+    color: white;
+    float: right;
+    margin-top: 3%;
+}
+.success-snackbar{
+    background-color: #55d571 !important;
+    color: beige;
+}
+/* .row{
+    margin-top: 20px;
+} */
+/* .btn-main-div{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     column-gap: 10px;
+     
+} */

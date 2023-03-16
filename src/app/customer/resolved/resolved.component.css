@@ -1,0 +1,38 @@
+/* @import url('../../../assets/bootstrap/bootstrap.min.css');
+
+
+table {
+  width: 100%;
+  text-align: center;
+}
+.mat-mdc-form-field {
+  font-size: 14px !important;
+  width: 100%;
+}
+th {
+  width: 20%;
+  font-weight: normal;
+  background-color: #3568A6 !important;
+  color: white !important;
+}
+.container-div {
+  padding: 1% 1%
+}
+@media only screen and (min-width: 100px) and (max-width: 600px){
+.container-div[_ngcontent-rcp-c158] {
+    width: 99%;
+}
+}
+.btnView {
+  background-color: #3568A6 !important;
+}
+ng-container {
+  text-align: center !important;
+}
+
+ */
+
+ .btn{
+  color: white;
+  background-color: #3568A6;
+}

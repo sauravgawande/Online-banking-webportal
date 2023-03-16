@@ -1,0 +1,88 @@
+
+/* @import url('E:\Online_complaint_redressal_syaytem\frontend\src\assets\bootstrap\bootstrap.min.css'); */
+@import url('../../../assets/bootstrap/bootstrap.min.css');
+/* .example-spacer {
+    flex: 1 1 auto ;
+    padding-right: 5em;
+  }
+  .but{
+    background: #3568A6 !important ;
+    color: white !important;
+  }
+  .mat-mdc-table {
+    width: 100%;
+    max-height: 400px;
+    overflow: auto;
+  }
+  
+  .mat-column-name {
+    height: 100px;
+  }
+  .mat-toolbar{
+    background-color: transparent;
+  } */
+  .btn2{
+    padding: 7px 20px;
+    border-radius: 5px;
+    background-color: #3568A6;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    border: 0;
+  }
+  .capitalize {
+    text-transform: capitalize;
+  }
+  .btn1{
+    color: white !important;
+    background-color: #3568A6 !important;
+    border-radius: .3em;
+  border-width: .1em;
+  }
+  mat-sidenav{
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    color: white;
+    background: #3568A6;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+.content{
+  height: calc(70vh - 100px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  overflow: auto;
+}
+
+mat-sidenav-container{
+    height: calc(70vh - 65px);
+    
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    
+
+} 
+
+.menu-button:hover{
+    color :white;
+    background-color:#3568A6 ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+ 
+.mat-mdc-button:not(:disabled) {
+    color: #fff;
+}
+.headPad{
+  padding: 1em;
+}

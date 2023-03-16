@@ -1,0 +1,128 @@
+<!-- 
+<section class="">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center "
+       *ngFor="let item of customer_details">
+        <div class="col col-lg-6 mb-4 mb-lg-0">
+          <div class="card mb-3" style="border-radius: .5rem;border: 0;">
+            <div class="row g-0">
+              <div class="col-md-4 gradient-custom text-center text-white"
+                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+  
+                <i class="far fa-edit mb-5"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-4">
+                  <div class="card-title p-0 m=0">
+                    <h4>Customer Details</h4>
+                    <hr class="mt-0 mb-4">
+                  </div>
+  
+  
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Customer Name</h6>
+                      <p class="text-muted">{{item.firstName}} {{item.lastName}}</p>
+                    </div>
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Phone</h6>
+                      <p class="text-muted">{{item.phone}}</p>
+                    </div>
+                  </div>
+  
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Address</h6>
+                      <p class="text-muted">{{item.address}}</p>
+                    </div>
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Pincode</h6>
+                      <p class="text-muted">{{item.pinCode}}</p>
+                    </div>
+                  </div>
+
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Date of Complaint</h6>
+                      <p class="text-muted">{{item.dateCreated}}</p>
+                    </div>
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Description</h6>
+                      <p class="text-muted">{{item.description}}</p>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+
+
+  <section class="">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center " *ngFor="let item of customer_details">
+        <div class="col col-lg-6 mb-4 mb-lg-0">
+          <div class="card mb-3" style="border-radius: .5rem;border: 0;">
+            <div class="row g-0">
+              <div class="col-md-4 gradient-custom text-center text-white"
+                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+  
+                <i class="far fa-edit mb-5"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-4">
+                  <div class="card-title p-0 m=0">
+                    <h4>Customer Details</h4>
+                    <button class="btn " mat-dialog-close>&times;</button>
+                    <hr class="mt-0 mb-4">
+                  </div>
+  
+  
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Customer Name</h6>
+                      <p class="text-muted">{{item.firstName}}&nbsp;{{item.lastName}}</p>
+                    </div>
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Phone</h6>
+                      <p class="text-muted">{{item.phone}}</p>
+                    </div>
+                  </div>
+  
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Address</h6>
+                      <p class="text-muted">{{item.address}}</p>
+                    </div>
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Pincode</h6>
+                      <p class="text-muted">{{item.pinCode}}</p>
+                    </div>
+                  </div>
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Description</h6>
+                      <p class="text-muted">{{item.description}}</p>
+                    </div>
+                    <div class="col-6 mb-3 w-50">
+                      <h6>Type of Problem</h6>
+                      <p class="text-muted">Can not make a call</p>
+                    </div>
+                  </div>
+  
+                  
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

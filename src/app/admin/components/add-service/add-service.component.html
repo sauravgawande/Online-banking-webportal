@@ -1,0 +1,77 @@
+<div
+  class="container text-center my-5"
+  style="
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+  "
+>
+  <h2 style="color: #3568a6; padding-top: 2%" class="my-5">Add Services</h2>
+
+  <div class="container">
+    <form [formGroup]="ServiceData" (ngSubmit)="createLocation()">
+      
+
+      <!-- 2 column grid layout for inline styling -->
+      <div class="row mb-4">
+        <div class="col-12 w-100 d-flex justify-content-center">
+          <input
+            type="text"
+            formControlName="name"
+            class="form-control w-100"
+            placeholder="Enter Service"
+          />
+        </div>
+        <!-- <div class="col-6 w-50 d-flex justify-content-center">
+          <input
+            type="text"
+            formControlName="pinCode"
+            class="form-control"
+            placeholder="Enter Pincode"
+          />
+        </div> -->
+      </div>
+
+      <!-- error message -->
+      <div class="row no-gutters m-0 p-0">
+        <div class="col-12 w-100 d-flex justify-content-center">
+          <p
+            *ngIf="name && name.invalid && name.touched"
+            style="color: red"
+          >
+            This field is Mandatory
+          </p>
+        </div>
+        <!-- <div class="col-6 w-50 d-flex justify-content-start">
+          <p
+            *ngIf="pinCode && pinCode.invalid && pinCode.touched"
+            class="m-0 p-0"
+            style="color: red"
+          >
+            This field is Mandatory
+          </p>
+        </div> -->
+      </div>
+
+     
+      <!-- Submit button -->
+      <button
+        type="submit"
+        class="btn btn-primary btn-block"
+        style="margin-bottom: 2%"
+       
+        [disabled]="ServiceData.invalid"
+      >
+        Submit
+      </button>
+      <button
+        type="submit"
+        class="btn btn-primary btn-block"
+        style="margin-bottom: 2%; margin-left: 1%"
+        routerLink="/admin/serviceType"
+      >
+        Back
+      </button>
+    </form>
+  </div>
+</div>
+

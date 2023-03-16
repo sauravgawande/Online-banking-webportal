@@ -1,0 +1,38 @@
+
+<mat-sidenav-container>
+
+    <mat-sidenav mode="side" opened>
+
+        
+        <!-- <mat-divider></mat-divider> -->
+        <button mat-button class="menu-button" routerLink="./allcomplains">
+            <mat-icon>person</mat-icon>
+            <span>All Complains</span>
+        </button>
+               <mat-divider></mat-divider>
+        <button mat-button class="menu-button" routerLink="./unassigncomplains">
+            <mat-icon>logout</mat-icon>
+            <span>Un Assigned</span>
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button" routerLink="./myprofile">
+            <mat-icon>home</mat-icon>
+            <span>My Profile</span>
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button" (click)="logout()">
+            <mat-icon>person</mat-icon>
+            <span>Logout</span>
+        </button>
+               <mat-divider></mat-divider>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z4 ">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- <app-footer></app-footer> -->

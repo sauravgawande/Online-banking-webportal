@@ -1,0 +1,44 @@
+mat-sidenav{
+    margin: 16px;
+    width: 220px;
+    border-right: none;
+    color: white;
+    background: #3568A6;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.content{
+  height: calc(60vh - 100px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  overflow: auto;
+}
+
+mat-sidenav-container{
+    height: calc(60vh - 65px);
+    
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    font-size: 1rem;
+    
+
+} 
+
+.menu-button:hover{
+    color :white;
+    background-color:#3568A6 ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+ 
+.mat-mdc-button:not(:disabled) {
+    color: #fff;
+}

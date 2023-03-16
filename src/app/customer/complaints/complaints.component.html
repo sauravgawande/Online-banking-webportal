@@ -1,0 +1,39 @@
+<div class="container">
+  <h2 style="margin-top: 1%; color: #3568a6;text-align: center;">Complaint List</h2>
+  <table class="table">
+    <thead>
+      <tr style="background-color: #3568a6;">
+        <th scope="col" style="width: 1%;">Sr.No</th>
+        <th scope="col">Ticket No</th>
+        <th scope="col">Service Type</th>
+        <th scope="col">Type Of Problem</th>
+        <th>Date Created</th>
+        <th>Description</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of users | paginate:{itemsPerPage:4, currentPage:p}; index as i">
+        <td style="width: 1%;">{{ i + 1 }}</td>
+        <td>{{ data.ticketNumber }}</td>
+        <td *ngFor="let item of data.serviceData">
+          {{ item.name }}
+        </td>
+        <td *ngFor="let item of data.problemData">
+          {{ item.name }}
+        </td>
+        <td>{{ data.dateCreated.slice(0, 15) }}</td>
+        <td>{{ data.description }}</td>
+        <td>{{ data.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row no-gutters" style="margin-top: 1%;">
+    <div class="col-10 w-50 text-start">
+      <pagination-controls (pageChange)="p=$event" class="float=rigth"></pagination-controls>
+    </div>
+    <div class="col-2 w-50 text-end">
+      <!-- <button class="btn btn-primary"  routerLink="/customer/complaints">Back</button> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.edit
+{
+    background-color: transparent;border: 0;
+    color: white;
+    width: 150px;
+}
+.edit:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+h4,p {
+    color: white;
+}
+h6{
+    color: #3568A6;
+}

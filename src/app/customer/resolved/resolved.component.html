@@ -1,0 +1,36 @@
+<div class="container text-center">
+  <h3 style="margin-top: 1%;color: #3568A6;">Resolved Complaint List</h3>
+  <div class="row no-gutters">
+      <div class="col-10 text-end">
+       
+      </div>
+      
+    </div>
+      <table class="table border">
+        <thead class="text-center" style="background-color: #3568A6;">
+          <tr> 
+            <th scope="col">Sr.No</th>
+            <th scope="col">Ticket No</th>
+            <th scope="col">Service Type</th>
+            <th scope="col">Type Of Problem</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+          <tbody>
+            <tr *ngFor="let data of user;index as i"> 
+              <td>{{i+1}}</td>
+              <td>{{data.ticketNumber}}</td>
+              <td>{{data.serviceTypeData[0].name}} </td>
+              <td>{{data.problemTypeData[0].name}} </td>
+              <td>{{data.status}}</td>
+            </tr>
+          </tbody>
+          <tfoot ><button class="btn btn-back" routerLink="/customer/complaints">Back</button></tfoot>
+      </table>
+  
+      
+  </div>
+
+
+
+
